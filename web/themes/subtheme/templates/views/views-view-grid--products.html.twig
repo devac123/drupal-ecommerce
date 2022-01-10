@@ -36,6 +36,7 @@
 {% if options.row_class_default %}
   {%
     set row_classes = [
+      'products-row',
       'views-row',
       options.alignment == 'horizontal' ? 'clearfix',
     ]
@@ -44,6 +45,7 @@
 {% if options.col_class_default %}
   {%
     set col_classes = [
+      'product-col',
       'views-col',
       options.alignment == 'vertical' ? 'clearfix',
     ]
