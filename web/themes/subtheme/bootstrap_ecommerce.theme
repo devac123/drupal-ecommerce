@@ -8,3 +8,7 @@ function bootstrap_ecommerce_theme_suggestions_alter(array &$suggestions, array 
         $suggestions[] = 'views_view_field__product';
    }
 }
+ function bootstrap_ecommerce_theme_suggestions_HOOK(array $var){
+   var_dump($var);
+}
+

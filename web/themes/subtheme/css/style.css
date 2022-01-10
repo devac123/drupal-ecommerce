@@ -27,7 +27,7 @@
  
  /* product fields css */
  
- .views-col{
+ .product-col{
      height: 100%;
      width: 100%;
      display: flex;
@@ -59,3 +59,26 @@
  .product-col{
      padding: 1rem;
  }
+ .footer-first
+ {
+     
+    display: flex;
+    align-items: center;
+ }
+
+.footer-first .block{ 
+     padding: 0px;
+    
+     border: none;
+ }
+ .site-footer__top{
+     display: flex;
+     justify-content: center;
+ }
+ .footer-navigation-menu li a {
+     color : white;
+ }
+
+ .footer-navigation-menu li  {
+    text-align: left;
+}
