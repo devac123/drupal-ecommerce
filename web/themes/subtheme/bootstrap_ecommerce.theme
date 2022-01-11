@@ -7,6 +7,12 @@ function bootstrap_ecommerce_theme_suggestions_alter(array &$suggestions, array 
    if($hook == 'views_view_field'){
         $suggestions[] = 'views_view_field__product';
    }
+   if($hook == "breadcrumb"){
+      $suggestions[] = 'breadcrumb__custom';
+   }
+   if($hook =="views_view_fields"){
+      $suggestions[] = 'views_view_fields__product';
+   }
 }
  function bootstrap_ecommerce_theme_suggestions_HOOK(array $var){
    var_dump($var);

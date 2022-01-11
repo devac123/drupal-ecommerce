@@ -63,7 +63,7 @@
  {
      
     display: flex;
-    align-items: center;
+    align-items: flex-start;
  }
 
 .footer-first .block{ 
@@ -73,7 +73,7 @@
  }
  .site-footer__top{
      display: flex;
-     justify-content: center;
+     justify-content: space-between;
  }
  .footer-navigation-menu li a {
      color : white;
@@ -81,4 +81,16 @@
 
  .footer-navigation-menu li  {
     text-align: left;
+}
+.footer-navigation-menu-2{
+    margin-top: 1.4rem !important;
+}
+
+.site-footer .block{
+    border: none;
+}
+.footer-location{
+    margin: -10px 0px!important;
+    padding: 0px;
+    float: right;
 }
