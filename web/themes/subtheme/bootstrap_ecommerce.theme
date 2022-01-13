@@ -13,6 +13,10 @@ function bootstrap_ecommerce_theme_suggestions_alter(array &$suggestions, array 
    if($hook =="views_view_fields"){
       $suggestions[] = 'views_view_fields__product';
    }
+   if($hook == "superfish"){
+      
+      $suggestions[] = 'superfish__main_navigation';
+   }
 }
  function bootstrap_ecommerce_theme_suggestions_HOOK(array $var){
    var_dump($var);
