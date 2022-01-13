@@ -1,0 +1,27 @@
+{
+    
+    "included": [
+      {
+        "type": "people",
+        "id": "42",
+        "attributes": {
+          "name": "John",
+          "age": 80,
+          "gender": "male"
+        }
+      }
+    ],
+    "include2": [
+      {
+        "type": "people",
+        "id": "43",
+        "attributes": {
+          "name": "John",
+          "age": 80,
+          "gender": "male"
+        }
+      }
+    ]
+  }
+
+  

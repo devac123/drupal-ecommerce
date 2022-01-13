@@ -1,11 +1,11 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => '9.3.0',
-        'version' => '9.3.0.0',
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => NULL,
+        'reference' => 'dcfedd5a32961c3e8c7dbc6404c66436d6192f37',
         'name' => 'drupal/recommended-project',
         'dev' => true,
     ),
@@ -635,12 +635,12 @@
             ),
         ),
         'drupal/recommended-project' => array(
-            'pretty_version' => '9.3.0',
-            'version' => '9.3.0.0',
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => NULL,
+            'reference' => 'dcfedd5a32961c3e8c7dbc6404c66436d6192f37',
             'dev_requirement' => false,
         ),
         'drupal/responsive_image' => array(
@@ -702,6 +702,15 @@
             'replaced' => array(
                 0 => '9.3.0',
             ),
+        ),
+        'drupal/superfish' => array(
+            'pretty_version' => '1.4.0',
+            'version' => '1.4.0.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/superfish',
+            'aliases' => array(),
+            'reference' => '8.x-1.4',
+            'dev_requirement' => false,
         ),
         'drupal/syslog' => array(
             'dev_requirement' => false,
@@ -866,6 +875,15 @@
             'install_path' => __DIR__ . '/../masterminds/html5',
             'aliases' => array(),
             'reference' => 'f640ac1bdddff06ea333a920c95bbad8872429ab',
+            'dev_requirement' => false,
+        ),
+        'mehrpadin/superfish' => array(
+            'pretty_version' => '2.1',
+            'version' => '2.1.0.0',
+            'type' => 'drupal-library',
+            'install_path' => __DIR__ . '/../../web/libraries/superfish',
+            'aliases' => array(),
+            'reference' => '80a0a484b727e9fbe6b0ee609f80e10e5e158683',
             'dev_requirement' => false,
         ),
         'pear/archive_tar' => array(
