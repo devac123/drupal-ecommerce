@@ -8,9 +8,17 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
 class SampleApiController extends ControllerBase {
-  public function put_example( Requst $req) {
+  public function put_example() {
+    
+    $data = array(
+       "title"=> "this is our title",
+       "body" => "this is our body"
+
+    );
     return array(
-      '#markup' => $req
+      '#markup' => "this id a put request",
+      '#theme'=>"put",
+      '#params' => $data
     );
   }
   public function get_example() {
