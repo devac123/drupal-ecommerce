@@ -1,0 +1,10 @@
+sample_form:
+  path: '/product/add-product'
+  defaults:
+    _title: 'ADD - PRODUCT'
+    _form: '\Drupal\sample_form\Form\SimpleForm'
+  requirements:
+     _permission: 'access content'
+     
+
+    # _controller: '\Drupal\sample_form\Controller\SampleFormController::add'
