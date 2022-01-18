@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'dcfedd5a32961c3e8c7dbc6404c66436d6192f37',
+        'reference' => '6555d1ef92598a54c992306973ddf6ae1d35ac1d',
         'name' => 'drupal/recommended-project',
         'dev' => true,
     ),
@@ -586,6 +586,15 @@
                 0 => '9.3.0',
             ),
         ),
+        'drupal/modal_page' => array(
+            'pretty_version' => '4.1.8',
+            'version' => '4.1.8.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/modal_page',
+            'aliases' => array(),
+            'reference' => '4.1.8',
+            'dev_requirement' => false,
+        ),
         'drupal/node' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -640,7 +649,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'dcfedd5a32961c3e8c7dbc6404c66436d6192f37',
+            'reference' => '6555d1ef92598a54c992306973ddf6ae1d35ac1d',
             'dev_requirement' => false,
         ),
         'drupal/responsive_image' => array(
@@ -654,6 +663,15 @@
             'replaced' => array(
                 0 => '9.3.0',
             ),
+        ),
+        'drupal/restui' => array(
+            'pretty_version' => '1.20.0',
+            'version' => '1.20.0.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/restui',
+            'aliases' => array(),
+            'reference' => '8.x-1.20',
+            'dev_requirement' => false,
         ),
         'drupal/search' => array(
             'dev_requirement' => false,
