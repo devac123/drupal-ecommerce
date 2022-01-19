@@ -67,7 +67,7 @@ class ExampleGetRestResource extends ResourceBase {
       $plugin_definition,
       $container->getParameter('serializer.formats'),
       $container->get('logger.factory')->get('example_rest'),
-      $container->get('current_user')
+      $container->get('current_user')              
     );
   }
 

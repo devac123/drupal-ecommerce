@@ -1,4 +1,4 @@
-sample_form:
+sample_form.simpleForm:
   path: '/product/add-product'
   defaults:
     _title: 'ADD - PRODUCT'

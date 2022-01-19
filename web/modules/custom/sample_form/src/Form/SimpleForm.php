@@ -1,4 +1,12 @@
 <?php
+/*
+-> Provide submit message to the user 
+ https://www.drupal.org/docs/drupal-apis/form-api/introduction-to-form-api
+
+-> how to create update node programatically in drupal
+https://drupalbook.org/drupal/       9112-add-update-delete-entity-programmatically#:~:text=Create%20node%20programmatically,is%20only%20the%20Title%20field.
+*/
+
 /**
  * @file
  * Contains \Drupal\resume\Form\ResumeForm.
@@ -6,7 +14,8 @@
 namespace Drupal\sample_form\Form;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
-use core\lib\Drupal\Core\Messenger\Messenger;
+
+use \Drupal\node\Entity\Node;
 
 
 class SimpleForm extends FormBase {
@@ -57,16 +66,40 @@ class SimpleForm extends FormBase {
 
       public function validateForm(array &$form, FormStateInterface $form_state) {
 
-        if (strlen($form_state->getValue('prod_name')) < 10) {
+        if (strlen($form_state->getValue('prod_name')) < 4) {
           $form_state->setErrorByName('prod_name', $this->t('Name is too short.'));
+        }
+        if ($form_state->getValue('price') < 1) {
+          $form_state->setErrorByName('price', $this->t('Price can not Be less than 1'));
         }
       }
 
       public function submitForm(array &$form, FormStateInterface $form_state) {
-            $this->addStatus('Print a status to the user.');
-        // foreach ($form_state->getValues() as $key => $value) {
-        //   drupal_set_message($key . ': ' . $value);
-        // }
+
+      /* sample insert query on submit 
+       * $result = $connection->insert('mytable')->fields([
+       * 'title' => 'Example',
+       * 'uid' => 1,
+       * 'created' => \Drupal::time()->getRequestTime(),
+       * ])
+       * ->execute();   
+      */
+        $connection = \Drupal::service('database');
+        $result = $connection->insert('tb_products')->fields([
+                    'pr_title' => $form_state->getValue('prod_name'),
+                    'vid' => 1,
+                    'pr_price' => $form_state->getValue('price'),
+                    'pr_type' => $form_state->getValue('product_type'),
+                  ])
+                  ->execute();
+
+        // creating node progrmatically  with (use \Drupal\node\Entity\Node;)
+        $node = Node::create([
+          'type'  => 'products',
+          'title' => 'hello',
+        ]);
+        $node->save();
+                            
       }
 
         
