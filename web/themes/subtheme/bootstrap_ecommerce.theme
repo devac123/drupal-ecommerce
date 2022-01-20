@@ -17,6 +17,9 @@ function bootstrap_ecommerce_theme_suggestions_alter(array &$suggestions, array 
       
       $suggestions[] = 'superfish__main_navigation';
    }
+   if($hook == "image_formatter"){
+      $suggestions[] = 'image_formatter_banner';
+   }
 }
  function bootstrap_ecommerce_theme_suggestions_HOOK(array $var){
    var_dump($var);

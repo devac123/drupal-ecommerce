@@ -1,8 +1,16 @@
-sample_form.simpleForm:
+sample_form.addProduct:
   path: '/product/add-product'
   defaults:
     _title: 'ADD - PRODUCT'
     _form: '\Drupal\sample_form\Form\SimpleForm'
+  requirements:
+     _permission: 'access content'
+     
+sample_form.addUser:
+  path: '/add-user'
+  defaults:
+    _title: 'ADD - USER'
+    _form: '\Drupal\sample_form\Form\ADD_USER'
   requirements:
      _permission: 'access content'
      

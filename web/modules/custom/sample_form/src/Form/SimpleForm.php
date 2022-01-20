@@ -11,6 +11,7 @@ https://drupalbook.org/drupal/       9112-add-update-delete-entity-programmatica
  * @file
  * Contains \Drupal\resume\Form\ResumeForm.
  */
+
 namespace Drupal\sample_form\Form;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
@@ -42,11 +43,7 @@ class SimpleForm extends FormBase {
           '#type' => 'number',
           '#title' => $this->t('Price'), 
           '#attributes' => array('id' => 'number-field', 'placeholder'=> 'Enter The Product_Price'),
-
-        ];
-        $form['product_image'] =[
-          '#type' => 'file',
-          '#title' => $this->t('Product Image'), 
+          
         ];
         $form['product_type'] =[
           '#type' => 'select',
@@ -75,29 +72,33 @@ class SimpleForm extends FormBase {
       }
 
       public function submitForm(array &$form, FormStateInterface $form_state) {
+         
+        $this->messenger()->addStatus($this->t($form_state->getValue('prod_name').' '.' Node Has been created Successfully'));
 
-      /* sample insert query on submit 
-       * $result = $connection->insert('mytable')->fields([
-       * 'title' => 'Example',
-       * 'uid' => 1,
-       * 'created' => \Drupal::time()->getRequestTime(),
-       * ])
-       * ->execute();   
-      */
         $connection = \Drupal::service('database');
         $result = $connection->insert('tb_products')->fields([
                     'pr_title' => $form_state->getValue('prod_name'),
                     'vid' => 1,
-                    'pr_price' => $form_state->getValue('price'),
+                    'pr_price' => $form_state->getValue('price')/2,
                     'pr_type' => $form_state->getValue('product_type'),
                   ])
                   ->execute();
+        
+
+        //for verification
+        $fid = null;      
+        
+         $title = $form_state->getValue('prod_name');
+         if($fid != null){
+             $title = $form_state->getValue(files['file']);
+         }
 
         // creating node progrmatically  with (use \Drupal\node\Entity\Node;)
         $node = Node::create([
           'type'  => 'products',
-          'title' => 'hello',
+          'title' => $title,
         ]);
+        $node->field_price->value = $form_state->getValue('price');
         $node->save();
                             
       }

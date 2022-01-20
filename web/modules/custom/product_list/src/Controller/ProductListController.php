@@ -29,7 +29,11 @@ class ProductListController {
     );
   }
 
-
+  public function create_user($id = null){
+    return array(
+      '#markup' => "this id a put request",
+    );
+  }
 
 }
 
