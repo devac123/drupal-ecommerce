@@ -12,7 +12,7 @@ sample_form.addUser:
     _title: 'ADD - USER'
     _form: '\Drupal\sample_form\Form\ADD_USER'
   requirements:
-     _permission: 'access content'
+     _permission: 'access content admin'
      
 
     # _controller: '\Drupal\sample_form\Controller\SampleFormController::add'

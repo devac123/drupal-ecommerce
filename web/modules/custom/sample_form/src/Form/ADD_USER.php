@@ -31,6 +31,12 @@ class ADD_USER extends FormBase {
             '#title' => $this->t('Password'), 
             '#attributes' => array('id' => 'password', 'placeholder'=> 'Enter The Password'),
           ];
+
+          $form['role'] =[
+            '#type' => 'select',
+            '#title' => $this->t('Selct-Role'),
+            '#options' => array(t('--- SELECT ---'), t('admin"'), t('authenticated user"'), t('content editor"'), t('ANONYMOUS USER"')), 
+          ];
           
         $form['submit'] = [
             '#type' => 'submit',
@@ -50,7 +56,7 @@ class ADD_USER extends FormBase {
 
 
         $username = $form_state->getValue('username');
-        $email = strval($form_state->getValue('email'));
+        $email =    $form_state->getValue('email');
         $password = $form_state->getValue('password');
         
       
@@ -68,18 +74,26 @@ class ADD_USER extends FormBase {
                 'mail'=>$email,
                 'status'=>1,
                 'init'=> $email,
-                'rols'=> array("DRUPAL_AUTHENTICATED_RID" => 'ADMINISTRATOR',
+                'rols'=> array("DRUPAL_AUTHENTICATED_RID" => 'authenticated user',
                             3 => 'administrator',
                             )
                 );
+                
+                 $user =  User::create($new_user)->save();
+                
+                 $query = $database->query("SELECT * FROM {users} inner join {users_field_data} on users.uid = users_field_data.uid WHERE  mail  = '$email'");
+                
+                 $result = $query->fetchAll();
+
                 $this->messenger()->addStatus($this->t($form_state->getValue('username').' '.count($result)));
 
-               $user =  User::create($new_user)->save();
-                  
-
+              $uid = user_load_by_mail($email); // user load 
+              $uid->addRole('administrator');
+              $uid->save();
+              
         }
         else{
-            $this->messenger()->addStatus($this->t($form_state->getValue('username').' '.count($result)));
+            $this->messenger()->addStatus($this->t($form_state->getValue('username')));
         }
 
 
