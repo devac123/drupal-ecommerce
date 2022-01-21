@@ -81,11 +81,10 @@ class ADD_USER extends FormBase {
                 
                  $user =  User::create($new_user)->save();
                 
-                 $query = $database->query("SELECT * FROM {users} inner join {users_field_data} on users.uid = users_field_data.uid WHERE  mail  = '$email'");
-                
-                 $result = $query->fetchAll();
+                 
+              
 
-                $this->messenger()->addStatus($this->t($form_state->getValue('username').' '.count($result)));
+                $this->messenger()->addStatus($this->t($form_state->getValue('username')));
 
               $uid = user_load_by_mail($email); // user load 
               $uid->addRole('administrator');
