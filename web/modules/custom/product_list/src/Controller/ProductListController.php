@@ -27,13 +27,18 @@ class ProductListController {
       '#theme'=>"product_list",
       '#params' => $result
     );
-  }
+    }
 
-  public function create_user($id = null){
-    return array(
-      '#markup' => "this id a put request",
-    );
-  }
+    public function Cservice(){
+
+      $our_service = \Drupal::service('custom_services.block_create');
+      
+      return array(
+        '#markup' =>  $our_service->getValue(),
+      );
+    }
+
+
 
 }
 
