@@ -15,9 +15,6 @@ class BlockCreateService{
      public function getValue(){
        $user = \Drupal\user\Entity\User::load(\Drupal::currentUser()
          ->id());
-
-
-
         return "user";
      }
 
