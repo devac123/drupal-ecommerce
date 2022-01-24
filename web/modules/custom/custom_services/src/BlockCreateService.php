@@ -16,7 +16,7 @@ class BlockCreateService{
        $user = \Drupal\user\Entity\User::load(\Drupal::currentUser()
          ->id());
 
-       
+
 
         return "user";
      }
