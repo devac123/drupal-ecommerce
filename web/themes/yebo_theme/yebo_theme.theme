@@ -1,0 +1,17 @@
+<?php
+
+use Drupal\node\Entity\Node;
+
+function yebo_theme_preprocess_block(&$variables){
+     
+    $id = $variables['elements']['#id'];
+    if($id == 'views_block__yeb_cycles_content_block_1'){
+        $node_details = Node::load(98);
+        $img = $node_details->get('field_image')->values;
+        \Drupal::logger('id')->notice('<pre>' . print_r($img, TRUE) . '</pre>' ); 
+    }
+}
+
+
+// Today's Task       
+// -> 

@@ -1,0 +1,12 @@
+yebo_form.newsletter:
+  path: '/newsletter'
+  defaults:
+    _title: 'subsribe'
+    _form: '\Drupal\yebo_form\Form\NewsLetter'
+  requirements:
+     _permission: 'access content'
+     
+
+     
+
+    # _controller: '\Drupal\sample_form\Controller\SampleFormController::add'

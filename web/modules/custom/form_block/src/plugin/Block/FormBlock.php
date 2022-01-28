@@ -17,6 +17,9 @@ use Drupal\Core\Block\BlockBase;
 class FormBlock extends BlockBase
 {
     public function build(){
-        return array("#markup"=>"shubham");
+         $form = \Drupal::formBuilder()->getForm('Drupal\yebo_form\Form\NewsLetter');
+          return $form;
     }
 }
+
+

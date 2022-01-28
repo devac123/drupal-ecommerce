@@ -1,0 +1,21 @@
+global-css-and-js:
+  css: 
+    theme:
+      css/bootstrap.min.css: {}
+      css/styles.css: {}
+      css/queries.css: {}
+      css/flexslider.css: {}
+      css/animate.css: {}
+     
+
+      # css/queries.css: {}
+
+  js: 
+    js/custom.js: {}
+    js/bootstrap.min.js: {}
+    # js/jquery.flexslider-min.js: {}
+    # js/scripts.js: {}
+    # js/modernizr.js: {}
+    # js/waypoints.min.js: {}
+
+    

@@ -1,0 +1,29 @@
+name: Yebo Bicycle 
+description: Yebo Bicycle costomized theme
+base theme: false
+type: theme
+core_version_requirement: ^8 || ^9
+
+
+libraries:
+  - yebo_theme/global-css-and-js
+
+
+
+regions:
+  header: 'Header'
+  content: Content
+  logo: 'logo'
+  navbar: 'navbar'
+  banner_section: 'banner_section'
+  introduction: 'introduciton'
+  
+  testimonial: 'testimonial'
+  gallery: 'gallery'
+  calltoaction: 'calltoaction'
+  newsletter:  Newsletter 
+  footer_first: 'Footer_first'
+  footer_second: 'Footer_second'
+  footer_third: 'Footer_third'
+ 
+  

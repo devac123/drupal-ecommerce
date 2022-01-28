@@ -8,6 +8,7 @@ var ele = document.getElementById('main-menu-link-contentad491e62-adf9-41a5-a3b0
 
 
 const xhttp = new XMLHttpRequest();
+
 xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         let res = JSON.parse(xhttp.responseText)
@@ -28,5 +29,8 @@ xhttp.onreadystatechange = function() {
       }
     }
 };
-xhttp.open("GET", "http://localhost/ecommerce/web/get/example/api", true);
+xhttp.open("GET", "http://localhost/ecommerce/web/get/example/api?_format=json",true);
+xhttp.setRequestHeader('Username', 'admin');
+xhttp.setRequestHeader('Password', 'admin');
+
 xhttp.send();
