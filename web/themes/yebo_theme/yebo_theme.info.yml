@@ -17,7 +17,6 @@ regions:
   navbar: 'navbar'
   banner_section: 'banner_section'
   introduction: 'introduciton'
-  
   testimonial: 'testimonial'
   gallery: 'gallery'
   calltoaction: 'calltoaction'

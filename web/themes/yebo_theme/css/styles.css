@@ -174,9 +174,12 @@ table { border-collapse: collapse; border-spacing: 0; }
 Headings
 ========================================================================== */
 h1.chain { text-align: center; text-transform: uppercase; color: #353738; letter-spacing: 2px; font-size: 18px; font-weight: 600; background: url(../img/cog-icon.png) no-repeat top center; padding-top: 75px; }
-h2.frame { text-align: center; text-transform: uppercase; color: #353738; letter-spacing: 2px; font-size: 18px; font-weight: 600; background: url(../img/frame-icon.png) no-repeat top center; padding-top: 65px; margin-top: 70px; }
-h2.mech { text-align: center; text-transform: uppercase; color: #353738; letter-spacing: 2px; font-size: 18px; font-weight: 600; background: url(../img/mech-icon.png) no-repeat top center; padding-top: 65px; margin-top: 70px; }
-h2.front-frame { text-align: center; text-transform: uppercase; color: #353738; letter-spacing: 2px; font-size: 18px; font-weight: 600; background: url(../img/front-icon.png) no-repeat top center; padding-top: 65px; margin-top: 70px; }
+h2.frame { text-align: center; text-transform: uppercase; color: #353738; letter-spacing: 2px; font-size: 18px; font-weight: 600;padding-top: 65px; margin-top: 70px; }
+span.frame{background: url(../img/frame-icon.png) no-repeat top center; padding-top: 65px; margin-top: 70px; }
+h2.mech { text-align: center; text-transform: uppercase; color: #353738; letter-spacing: 2px; font-size: 18px; font-weight: 600;  padding-top: 65px; margin-top: 70px; }
+span.mech { text-align: center; text-transform: uppercase; color: #353738; letter-spacing: 2px; font-size: 18px; font-weight: 600; background: url(../img/mech-icon.png) no-repeat top center; padding-top: 65px; margin-top: 70px; }
+h2.front-frame { text-align: center; text-transform: uppercase; color: #353738; letter-spacing: 2px; font-size: 18px; font-weight: 600; padding-top: 65px; margin-top: 70px; }
+span.front-frame { text-align: center; text-transform: uppercase; color: #353738; letter-spacing: 2px; font-size: 18px; font-weight: 600; background: url(../img/front-icon.png) no-repeat top center; padding-top: 65px; margin-top: 70px; }
 h2.twitter-post-username { color: #353738; letter-spacing: 2px; font-size: 18px; font-weight: 600; margin-top: 30px; }
 h2.twitter-post-username span { color: #848789; font-weight: 300; }
 h2.logo-header { text-align: center; color: #848789; letter-spacing: 1px; font-size: 24px; font-weight: 300;  padding-top: 0px; margin: 40px 0 40px 0; 
@@ -208,8 +211,15 @@ p.text-intro { font-size: 18px; }
 }
 nav { height: 85px; margin-top: 30px; position: relative; 
 }
-.logo-holder { background: url(../img/main-logo.png) no-repeat center center; width: 94px; height: 85px; position: absolute; top: 0; left: 327px; 
-cursor: pointer;}
+/* .logo-holder {
+	 background: url(../img/main-logo.png) ;
+	 background-repeat : no-repeat center center; width: 94px; height: 85px; position: absolute; top: 0; left: 327px; 
+cursor: pointer;} */
+
+ .logo-holder {
+	width: 94px; height: 85px; position: absolute; top: 0; left: 327px; 
+    cursor: pointer;
+} 
 
 #block-sitebranding{
 	background-repeat: no-repeat;
@@ -296,7 +306,7 @@ footer p { font-size: 13px; margin: 0; }
 #resume-form{
 	display: flex;
 }
-/* #block-views-block-yebo-gallery-block-block-1-2 .custom-grid{
+/* #block-views-block-yebo-gallery-block-block-1-2 .custom-grfrid{
 	display: grid;
     grid-template-columns: 16% 16% 16% 16% 36%;
 	grid-template-rows: repeat(2 , 1fr);

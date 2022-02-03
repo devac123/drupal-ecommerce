@@ -1,0 +1,10 @@
+	<div class="flexslider">
+		<ul class="slides">
+		{% for col in rows %}
+			<li>
+				<div class="flex-twitter-icon"></div>
+					{{col.content}}
+			</li>
+			{% endfor %}
+		</ul>
+	</div>
